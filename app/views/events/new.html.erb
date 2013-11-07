@@ -1,0 +1,12 @@
+<h1>New event</h1>
+
+<h2> Create Event </h2>
+<%= form_for @event do |f|%>
+<p> name: <%= f.text_field :name %></p>
+<p> desc: <%= f.text_field :event_desc %></p>
+<%= f.hidden_field :user_id %>
+<%= f.submit 'Create' %>
+<% end %>
+
+
+<%= link_to 'Back', events_path %>

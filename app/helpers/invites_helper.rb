@@ -1,0 +1,3 @@
+module InvitesHelper
+
+end

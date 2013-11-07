@@ -1,0 +1,11 @@
+<h1>Editing invite</h1>
+<%= form_for(@invite) do |f| %>
+
+<p>Event: <%=f.select(:event_id,options_for_events_select(@events)) %></p>
+<p>User:  <%=f.select(:user_id,options_for_users_select(@users)) %></p>
+<p>Attending:  <%=f.select(:rsvp,[["TRUE","true"],["FALSE","false"]]) %> </p>
+<%= f.submit %>
+<% end %>
+
+<%= link_to 'Show', @invite %> |
+<%= link_to 'Back', invites_path %>

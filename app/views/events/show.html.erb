@@ -1,0 +1,10 @@
+<p id="notice"><%= notice %></p>
+
+<%= link_to 'Edit', edit_event_path(@event) %> |
+<%= link_to 'Back', events_path %>
+
+<h1> name: <%= @event.name %></h1><br>
+<h2> description: <%= @event.event_desc %> </h2><br>
+<h3> user_name: <%= User.find(@event.user_id).user_name %></h3><br>
+<%= link_to "create a new invite" ,{:action=>"new",:controller=>"invites"} %>
+<br>
